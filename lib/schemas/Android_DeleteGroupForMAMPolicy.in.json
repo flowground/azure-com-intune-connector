@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "hostName": {
+            "required": true,
+            "type": "string"
+        },
+        "policyName": {
+            "required": true,
+            "type": "string"
+        },
+        "groupId": {
+            "required": true,
+            "type": "string"
+        },
+        "api_version": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

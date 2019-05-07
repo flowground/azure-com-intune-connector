@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "properties": {
+        "hostName": {
+            "required": true,
+            "type": "string"
+        },
+        "policyName": {
+            "required": true,
+            "type": "string"
+        },
+        "groupId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "MAM Policy request body for properties Intune MAM.",
+            "properties": {
+                "properties": {
+                    "description": "Android Policy request body for Intune MAM.",
+                    "properties": {
+                        "url": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "url"
+                    ]
+                }
+            },
+            "type": "object"
+        },
+        "api_version": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

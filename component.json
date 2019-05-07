@@ -1,0 +1,595 @@
+{
+    "title": "IntuneResourceManagementClient",
+    "description": "Microsoft.Intune Resource provider Api features in the swagger-2.0 specification",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/azure.com/intune/2015-01-14-privatepreview/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://management.azure.com/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "GetLocations": {
+            "main": "./lib/actions/GetLocations.js",
+            "title": "Returns location for user tenant.",
+            "description": "Returns location for user tenant.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetLocations.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetLocationByHostName": {
+            "main": "./lib/actions/GetLocationByHostName.js",
+            "title": "Returns location for given tenant.",
+            "description": "Returns location for given tenant.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetLocationByHostName.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Android_GetAppForMAMPolicy": {
+            "main": "./lib/actions/Android_GetAppForMAMPolicy.js",
+            "title": "Get apps for an AndroidMAMPolicy.",
+            "description": "Get apps for an AndroidMAMPolicy.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Android_GetAppForMAMPolicy.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Android_GetMAMPolicies": {
+            "main": "./lib/actions/Android_GetMAMPolicies.js",
+            "title": "Returns Intune Android policies.",
+            "description": "Returns Intune Android policies.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Android_GetMAMPolicies.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Android_DeleteMAMPolicy": {
+            "main": "./lib/actions/Android_DeleteMAMPolicy.js",
+            "title": "Delete Android Policy",
+            "description": "Delete Android Policy",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Android_DeleteMAMPolicy.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Android_GetMAMPolicyByName": {
+            "main": "./lib/actions/Android_GetMAMPolicyByName.js",
+            "title": "Returns AndroidMAMPolicy with given name.",
+            "description": "Returns AndroidMAMPolicy with given name.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Android_GetMAMPolicyByName.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Android_PatchMAMPolicy": {
+            "main": "./lib/actions/Android_PatchMAMPolicy.js",
+            "title": "Patch AndroidMAMPolicy.",
+            "description": "Patch AndroidMAMPolicy.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Android_PatchMAMPolicy.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Android_CreateOrUpdateMAMPolicy": {
+            "main": "./lib/actions/Android_CreateOrUpdateMAMPolicy.js",
+            "title": "Creates or updates AndroidMAMPolicy.",
+            "description": "Creates or updates AndroidMAMPolicy.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Android_CreateOrUpdateMAMPolicy.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Android_DeleteAppForMAMPolicy": {
+            "main": "./lib/actions/Android_DeleteAppForMAMPolicy.js",
+            "title": "Delete App for Android Policy",
+            "description": "Delete App for Android Policy",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Android_DeleteAppForMAMPolicy.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Android_AddAppForMAMPolicy": {
+            "main": "./lib/actions/Android_AddAppForMAMPolicy.js",
+            "title": "Add app to an AndroidMAMPolicy.",
+            "description": "Add app to an AndroidMAMPolicy.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Android_AddAppForMAMPolicy.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Android_GetGroupsForMAMPolicy": {
+            "main": "./lib/actions/Android_GetGroupsForMAMPolicy.js",
+            "title": "Returns groups for a given AndroidMAMPolicy.",
+            "description": "Returns groups for a given AndroidMAMPolicy.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Android_GetGroupsForMAMPolicy.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Android_DeleteGroupForMAMPolicy": {
+            "main": "./lib/actions/Android_DeleteGroupForMAMPolicy.js",
+            "title": "Delete Group for Android Policy",
+            "description": "Delete Group for Android Policy",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Android_DeleteGroupForMAMPolicy.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Android_AddGroupForMAMPolicy": {
+            "main": "./lib/actions/Android_AddGroupForMAMPolicy.js",
+            "title": "Add group to an AndroidMAMPolicy.",
+            "description": "Add group to an AndroidMAMPolicy.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Android_AddGroupForMAMPolicy.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetApps": {
+            "main": "./lib/actions/GetApps.js",
+            "title": "Returns Intune Manageable apps.",
+            "description": "Returns Intune Manageable apps.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetApps.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetMAMFlaggedUsers": {
+            "main": "./lib/actions/GetMAMFlaggedUsers.js",
+            "title": "Returns Intune flagged user collection",
+            "description": "Returns Intune flagged user collection",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetMAMFlaggedUsers.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetMAMFlaggedUserByName": {
+            "main": "./lib/actions/GetMAMFlaggedUserByName.js",
+            "title": "Returns Intune flagged user details",
+            "description": "Returns Intune flagged user details",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetMAMFlaggedUserByName.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetMAMUserFlaggedEnrolledApps": {
+            "main": "./lib/actions/GetMAMUserFlaggedEnrolledApps.js",
+            "title": "Returns Intune flagged enrolled app collection for the User",
+            "description": "Returns Intune flagged enrolled app collection for the User",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetMAMUserFlaggedEnrolledApps.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Ios_GetMAMPolicies": {
+            "main": "./lib/actions/Ios_GetMAMPolicies.js",
+            "title": "Returns Intune iOSPolicies.",
+            "description": "Returns Intune iOSPolicies.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Ios_GetMAMPolicies.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Ios_DeleteMAMPolicy": {
+            "main": "./lib/actions/Ios_DeleteMAMPolicy.js",
+            "title": "Delete Ios Policy",
+            "description": "Delete Ios Policy",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Ios_DeleteMAMPolicy.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Ios_GetMAMPolicyByName": {
+            "main": "./lib/actions/Ios_GetMAMPolicyByName.js",
+            "title": "Returns Intune iOS policies.",
+            "description": "Returns Intune iOS policies.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Ios_GetMAMPolicyByName.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Ios_PatchMAMPolicy": {
+            "main": "./lib/actions/Ios_PatchMAMPolicy.js",
+            "title": " patch an iOSMAMPolicy.",
+            "description": " patch an iOSMAMPolicy.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Ios_PatchMAMPolicy.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Ios_CreateOrUpdateMAMPolicy": {
+            "main": "./lib/actions/Ios_CreateOrUpdateMAMPolicy.js",
+            "title": "Creates or updates iOSMAMPolicy.",
+            "description": "Creates or updates iOSMAMPolicy.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Ios_CreateOrUpdateMAMPolicy.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Ios_GetAppForMAMPolicy": {
+            "main": "./lib/actions/Ios_GetAppForMAMPolicy.js",
+            "title": "Get apps for an iOSMAMPolicy.",
+            "description": "Get apps for an iOSMAMPolicy.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Ios_GetAppForMAMPolicy.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Ios_DeleteAppForMAMPolicy": {
+            "main": "./lib/actions/Ios_DeleteAppForMAMPolicy.js",
+            "title": "Delete App for Ios Policy",
+            "description": "Delete App for Ios Policy",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Ios_DeleteAppForMAMPolicy.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Ios_AddAppForMAMPolicy": {
+            "main": "./lib/actions/Ios_AddAppForMAMPolicy.js",
+            "title": "Add app to an iOSMAMPolicy.",
+            "description": "Add app to an iOSMAMPolicy.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Ios_AddAppForMAMPolicy.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Ios_GetGroupsForMAMPolicy": {
+            "main": "./lib/actions/Ios_GetGroupsForMAMPolicy.js",
+            "title": "Returns groups for a given iOSMAMPolicy.",
+            "description": "Returns groups for a given iOSMAMPolicy.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Ios_GetGroupsForMAMPolicy.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Ios_DeleteGroupForMAMPolicy": {
+            "main": "./lib/actions/Ios_DeleteGroupForMAMPolicy.js",
+            "title": "Delete Group for iOS Policy",
+            "description": "Delete Group for iOS Policy",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Ios_DeleteGroupForMAMPolicy.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Ios_AddGroupForMAMPolicy": {
+            "main": "./lib/actions/Ios_AddGroupForMAMPolicy.js",
+            "title": "Add group to an iOSMAMPolicy.",
+            "description": "Add group to an iOSMAMPolicy.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Ios_AddGroupForMAMPolicy.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetOperationResults": {
+            "main": "./lib/actions/GetOperationResults.js",
+            "title": "Returns operationResults.",
+            "description": "Returns operationResults.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetOperationResults.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetMAMStatuses": {
+            "main": "./lib/actions/GetMAMStatuses.js",
+            "title": "Returns Intune Tenant level statuses.",
+            "description": "Returns Intune Tenant level statuses.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetMAMStatuses.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetMAMUserDevices": {
+            "main": "./lib/actions/GetMAMUserDevices.js",
+            "title": "Get devices for a user.",
+            "description": "Get devices for a user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetMAMUserDevices.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetMAMUserDeviceByDeviceName": {
+            "main": "./lib/actions/GetMAMUserDeviceByDeviceName.js",
+            "title": "Get a unique device for a user.",
+            "description": "Get a unique device for a user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetMAMUserDeviceByDeviceName.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "WipeMAMUserDevice": {
+            "main": "./lib/actions/WipeMAMUserDevice.js",
+            "title": "Wipe a device for a user.",
+            "description": "Wipe a device for a user.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/WipeMAMUserDevice.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

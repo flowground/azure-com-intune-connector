@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "hostName": {
+            "required": true,
+            "type": "string"
+        },
+        "policyName": {
+            "required": true,
+            "type": "string"
+        },
+        "api_version": {
+            "required": true,
+            "type": "string"
+        },
+        "_filter": {
+            "required": false,
+            "type": "string"
+        },
+        "_top": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "_select": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

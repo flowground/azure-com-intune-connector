@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "hostName": {
+            "required": true,
+            "type": "string"
+        },
+        "userName": {
+            "required": true,
+            "type": "string"
+        },
+        "deviceName": {
+            "required": true,
+            "type": "string"
+        },
+        "api_version": {
+            "required": true,
+            "type": "string"
+        },
+        "_select": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}
